@@ -3,7 +3,7 @@ def extract_key(s,c):
     result = []
     for char in s:
         temp = char.split(" ")
-        result.append(temp[c-1])
+        result.append(temp)
     return result
 
     
