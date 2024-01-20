@@ -2,9 +2,9 @@ function selectionSort(ar){
     l = ar.length;
     for(let i=0;i<l;i++){
         let small = i;
-        for(let j=i;j<l;j++){
-            if(ar[small]>ar[j+1]){
-                small = j+1
+        for(let j=i+1;j<l;j++){
+            if(ar[small]>ar[j]){
+                small = j
             }
         }
         const t = ar[i]
