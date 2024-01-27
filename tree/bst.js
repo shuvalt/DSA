@@ -10,8 +10,6 @@ class binarySearchTree{
     constructor(){
         this.root = null;
     }
-
-    //inserting
     insert(value){
         const newNode = new Node(value);
         if(this.root === null){
@@ -33,6 +31,22 @@ class binarySearchTree{
                     }
                     currentNode = currentNode.right
                 }
+            }
+        }
+    }
+
+    lookUp(value){
+        if(!this.root){
+            return "tree is empty."
+        }
+        let currentNode = this.root;
+        while(currentNode){
+            if(value < currentNode.value){
+                currentNode = currentNode.left;
+            }else if(value > currentNode.value){
+                currentNode = currentNode.right;
+            }else if(value === currentNode.value){
+                return currentNode.value;
             }
         }
     }
